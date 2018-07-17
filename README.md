@@ -1,15 +1,21 @@
-# CryptoCompareAPI
-Java implementation of CryptoCompare API service
+# cryptoCompareAPI
+Fork of [Josh-McFarlins CryptoCompare API](https://github.com/Josh-McFarlin/CryptoCompareAPI) to make it usable with gradle.
 
-## Installation
-Maven:
-```xml
-<dependency>
-    <groupId>me.joshmcfarlin</groupId>
-    <artifactId>CryptoCompareAPI</artifactId>
-    <version>1.0-SNAPSHOT</version>
-</dependency>
+## Integration
+
+### Gradle Dependency
+
+Add this in your `build.gradle` file:
+```gradle
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+...
+dependencies {
+    compile 'com.github.Atzen2:cryptoCompareAPI:v0.1'
+}
 ```
+
 
 ## Usage
 ```java
@@ -26,7 +32,7 @@ System.out.println("Bitcoin price in USD and EUR:");
 System.out.println(btcPrice);
 ```
 
-An example is provided in the Maven test sources.
+An example is provided in the test sources.
 
 ## Documentation
 

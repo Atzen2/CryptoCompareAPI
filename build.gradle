@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+repositories {
+    jcenter()
+}
+
+
+dependencies {
+    compile "com.google.code.gson:gson:2.8.2"
+    testCompile "org.junit.jupiter:junit-jupiter-api:5.0.2"
+}
