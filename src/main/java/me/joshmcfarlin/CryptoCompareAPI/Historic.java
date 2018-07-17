@@ -48,6 +48,24 @@ public class Historic {
         Reader r = Connection.getJSON(new URL(formattedUrl), CallTypes.HISTO);
         return new Gson().fromJson(r, History.class);
     }
+    
+    /**
+     * Gets market data for a symbol pair by hour from a specific exchange in a time frame defined by specified timestamp up to the provided limit
+     * @param fromSym The symbol (cryptocurrency or currency) to convert from
+     * @param toSym The symbol (cryptocurrency or currency) to convert to
+     * @param limit The number of prices by hour to get
+     * @param timestamp The unix timestamp where the time frame starts
+     * @param exchange The exchange where the data should be requested from
+     * @return History A class containing different API data
+     * @throws IOException when a connection cannot be made
+     * @throws OutOfCallsException when no more API calls are available
+     */
+    public static History getHour(String fromSym, String toSym, int limit, int timestamp, String exchange) throws IOException, OutOfCallsException {
+        String formattedUrl = String.format("https://min-api.cryptocompare.com/data/histohour?fsym=%s&tsym=%s&limit=%d&toTs=%d&e=%s",
+                fromSym.toUpperCase(), toSym.toUpperCase(), limit, timestamp, exchange.toUpperCase());
+        Reader r = Connection.getJSON(new URL(formattedUrl), CallTypes.HISTO);
+        return new Gson().fromJson(r, History.class);
+    }
 
     /**
      * Gets market data for a symbol pair by day up to to the provided limit

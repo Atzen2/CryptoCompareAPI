@@ -12,7 +12,7 @@ repositories {
 }
 ...
 dependencies {
-    compile 'com.github.Atzen2:cryptoCompareAPI:v0.1'
+    compile 'com.github.Atzen2:cryptoCompareAPI:v0.2'
 }
 ```
 
@@ -34,9 +34,6 @@ System.out.println(btcPrice);
 
 An example is provided in the test sources.
 
-## Documentation
-
-Documentation is provided at [http://joshmcfarlin.me/CryptoCompareAPI/](http://joshmcfarlin.me/CryptoCompareAPI/)
 
 ## License
 This project is developed under the MIT license. This license can be found at [LICENSE](LICENSE).
