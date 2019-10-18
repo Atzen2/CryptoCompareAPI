@@ -12,7 +12,7 @@ repositories {
 }
 ...
 dependencies {
-    compile 'com.github.Atzen2:cryptoCompareAPI:v0.3'
+    compile 'com.github.atz3n:cryptoCompareAPI:v0.3'
 }
 ```
 
